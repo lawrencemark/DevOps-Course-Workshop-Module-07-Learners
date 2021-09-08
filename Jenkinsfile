@@ -9,6 +9,13 @@ pipeline {
            steps { 
                dir('DotnetTemplate.Web') {
                sh 'npm install'
+               sh 'npm run build'
+
+               /* Liniting and TypeScripts test*/
+
+               sh 'npm -t'
+               sh 'npm run linit'
+
                }               
                }
         }
@@ -22,6 +29,10 @@ pipeline {
             }
             steps {
                 sh 'dotnet build'
+
+            /* dotNet test*/
+
+                sh 'dotnet test'
                 
             }
         }
