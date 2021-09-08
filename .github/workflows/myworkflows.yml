@@ -10,3 +10,6 @@ jobs:
 
     - name: Build the code
       run: dotnet build
+
+    - name: Run the Csharp Test
+      run: /DotnetTemplate.Web/dotnet test
