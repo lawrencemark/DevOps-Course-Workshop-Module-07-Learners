@@ -1,18 +1,18 @@
 pipeline {
-    agent none
+    agent {
+               docker {image 'node:16-alpine3.11'}
+    }
    
     stages {
-        stage('Node') {
-            agent {
-               docker {image 'node:16-alpine3.11'}
-            }
-    }       steps { 
+        stage('Node Build...') {          
+           steps { 
                dir('DotnetTemplate.Web/') {
                    sh 'npm install'
                    sh 'npm run build'
                }
     }
     }
+}
 }
 
 
