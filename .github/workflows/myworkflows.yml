@@ -8,5 +8,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2 # Adds a step to checkout the repository code
 
-   - name: Build the code
-     run: dotnet build
+    - name: Build the code
+      run: dotnet build
