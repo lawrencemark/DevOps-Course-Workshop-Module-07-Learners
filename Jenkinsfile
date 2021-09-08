@@ -7,7 +7,6 @@ pipeline {
         stage('Node Build...') {          
            steps { 
                dir('DotnetTemplate.Web/') {
-                   sh 'npm install'
                    sh 'npm run build'
                }
     }
