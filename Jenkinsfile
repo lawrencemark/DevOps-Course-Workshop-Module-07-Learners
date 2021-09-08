@@ -1,11 +1,18 @@
 pipeline {
-    agent any
+    agent {
+        docker { image 'node:14-alpine' }
+    }
 
     stages {
         stage('Build') {
             steps {
-                dotnet build
-                npm install
+                apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
+
+                sudo apt-get update; \
+                sudo apt-get install -y apt-transport-https && \
+                sudo apt-get update && \
+                sudo apt-get install -y dotnet-sdk-5.0
+                
             }
         }
         stage('Test') {
