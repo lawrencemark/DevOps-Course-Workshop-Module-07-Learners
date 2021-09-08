@@ -10,6 +10,29 @@ jobs:
 
     - name: Build the code
       run: dotnet build
+    
+    - name: npm install
+      working-directory: DotnetTemplate.Web
+      run: npm install
+    
+    - name: npm run build
+      working-directory: DotnetTemplate.Web
+      run: npm run build     
 
-    - name: Run the Csharp Test
-      run: /DotnetTemplate.Web/dotnet test
+    - name: dotnet test
+      run: dotnet test
+
+    - name: npm t
+      working-directory: DotnetTemplate.Web
+      run: npm t
+
+    - name: npm t
+      working-directory: DotnetTemplate.Web
+      run: npm run lint
+
+
+
+
+
+    
+    
