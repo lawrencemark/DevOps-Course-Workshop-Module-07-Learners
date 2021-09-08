@@ -6,13 +6,13 @@ pipeline {
     stages {
         stage('Node Build...') {          
            steps { 
-               dir('DotnetTemplate.Web/') {
-                   sh 'npm run build'
+               sh 'uname'
                }
+        }
     }
     }
-}
-}
+
+
 
 
 
