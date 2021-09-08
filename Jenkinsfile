@@ -14,7 +14,7 @@ pipeline {
                /* Liniting and TypeScripts test*/
 
                sh 'npm t'
-               sh 'npm run linit'
+               sh 'npm run lint'
 
                }               
                }
