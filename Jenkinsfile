@@ -7,7 +7,7 @@ pipeline {
                 docker {image 'node:16-alpine3.11'} 
             }         
            steps { 
-               dir('/DotnetTemplate.Web') {
+               dir('DotnetTemplate.Web') {
                sh 'npm install'
                }               
                }
