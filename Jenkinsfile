@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                dotnet build
+                npm install
             }
         }
         stage('Test') {
