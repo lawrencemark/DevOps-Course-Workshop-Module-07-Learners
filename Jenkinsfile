@@ -13,7 +13,7 @@ pipeline {
 
                /* Liniting and TypeScripts test*/
 
-               sh 'npm -t'
+               sh 'npm t'
                sh 'npm run linit'
 
                }               
