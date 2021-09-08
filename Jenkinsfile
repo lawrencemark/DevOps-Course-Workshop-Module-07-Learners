@@ -6,12 +6,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                apk add bash icu-libs krb5-libs libgcc libintl libssl1.1 libstdc++ zlib
-
-                sudo apt-get update; \
-                sudo apt-get install -y apt-transport-https && \
-                sudo apt-get update && \
-                sudo apt-get install -y dotnet-sdk-5.0
+                sh 'uname'
                 
             }
         }
