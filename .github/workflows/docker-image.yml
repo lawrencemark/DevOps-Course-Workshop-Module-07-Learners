@@ -17,6 +17,6 @@ jobs:
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag marklawrence/dotnetemplate:latest 
     - name: Login to Docker Hub
-      run: docker login -u ${{secrets.DOCKER_USER}} -p ${{secrets.DOCKER_PASSWORD}}
+      run: docker login -u ${{secrets.DOCKER_USERNAME}} -p ${{secrets.DOCKER_PASSWORD}}
     - name: Push the Docker image
       run: docker push marklawrence/dotnetemplate:latest
