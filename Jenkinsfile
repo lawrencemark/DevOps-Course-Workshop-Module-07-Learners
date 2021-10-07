@@ -11,7 +11,7 @@ pipeline {
                sh 'npm install'
                sh 'npm run build'
 
-               /* Liniting and TypeScripts test*/
+               /* Linting and TypeScripts test*/
 
                sh 'npm t'
                sh 'npm run lint'
